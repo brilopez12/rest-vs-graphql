@@ -31,6 +31,8 @@ Incluye un endpoint GraphQL funcional y una interfaz GraphiQL para realizar cons
 
    ```bash
    composer require mll-lab/laravel-graphiql
+   php artisan vendor:publish --tag=lighthouse-schema
+   php artisan vendor:publish --tag=lighthouse-config
    ```
 
 4. Arrancar el servidor:
