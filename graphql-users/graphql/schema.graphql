@@ -9,6 +9,7 @@ type User {
 # ----------- QUERIES -----------
 type Query {
   users: [User!]! @all(model: "App\\Models\\User")
+  user(id: ID!): User @find(model: "App\\Models\\User")
 }
 
 # ----------- MUTATIONS -----------
