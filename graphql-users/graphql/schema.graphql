@@ -1,0 +1,21 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  created_at: String!
+  updated_at: String!
+}
+
+# ----------- QUERIES -----------
+type Query {
+  users: [User!]! @all(model: "App\\Models\\User")
+}
+
+# ----------- MUTATIONS -----------
+type Mutation {
+  createUser(
+    name: String!
+    email: String!
+    password: String!
+  ): User @create(model: "App\\Models\\User")
+}
